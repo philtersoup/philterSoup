@@ -14,6 +14,26 @@ description: Music Production | Composition
 			<h1>Media Composition</h1>
 		</header>
 		<div class="row">
+		<div class="4u 12u$(small)">
+		<h4>Philips (2022)</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href="https://www.youtube.com/watch?v=dktoLx6wdwo"><img src="assets/images/production_philips_2022.png" alt="" /></a></span>
+		</div>
+		<div class="4u 12u$(small)">
+		<h4>Treebo (2022)</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href="https://www.youtube.com/watch?v=1opbg-srnDw"><img src="assets/images/production_treebo_2022.png" alt="" /></a></span>
+		</div>
+		<div class="4u 12u$(small)">
+		<h4>Battle Grounds Mobile India (2022)</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href="https://www.youtube.com/watch?v=nSbni_y8md4"><img src="assets/images/production_bgmi2_2022.png" alt="" /></a></span>
+		</div>
+		</div>
+		<div class="row">
 	<div class="4u 12u$(small)">
 		<h4>Battle Grounds Mobile India (2022)</h4>
 		<p><i>Music Composition and Production<br>
@@ -58,7 +78,7 @@ description: Music Production | Composition
 </div>
 <div class="row">
 	<div class="4u 12u$(small)">
-		<h4>Fossils (2020)</h4>
+		<h4>Fossil (2020)</h4>
 		<p><i>Music Composition and Production<br>
 		Composer - Sanjay Das, Satyajit Chatterji</i></p>
 		<span class="image fit"><a href="https://www.youtube.com/watch?v=ExdUbc4Sxr8"><img src="assets/images/production_fossils_2020.png" alt="" /></a></span>

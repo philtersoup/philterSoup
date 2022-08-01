@@ -15,6 +15,28 @@ description: Music Production | Composition
 		</header>
 		<div class="row">
 		<div class="4u 12u$(small)">
+		<h4>OnePlus (2022)</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href="https://www.youtube.com/watch?v=8wTOGuFk3GQ"><img src="assets/images/production_oneplus_2022.png" alt="" /></a></span>
+		</div>
+		<div class="4u 12u$(small)">
+		<h4>My Daughter Joined A Cult (2022)</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href="https://www.youtube.com/watch?v=gIRwEJcnlzk"><img src="assets/images/production_mdjac_2022.png" alt="" /></a></span>
+		</div>
+		<div class="4u 12u$(small)">
+		<h4>Ranveer vs Wild (2022)</h4>
+		<p><i>Additional Composition and Production<br>
+		Composer - Neel Adhikari</i></p>
+		<span class="image fit"><a href="https://www.youtube.com/watch?v=joH3je2HrxA"><img src="assets/images/production_rvw_2022.jpeg" alt="" /></a></span>
+		</div>
+		</div>
+		<div class="row">
+
+		<div class="row">
+		<div class="4u 12u$(small)">
 		<h4>Philips (2022)</h4>
 		<p><i>Music Composition and Production<br>
 		Composer - Sanjay Das</i></p>

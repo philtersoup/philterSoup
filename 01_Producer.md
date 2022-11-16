@@ -15,6 +15,26 @@ description: Music Production | Composition
 		</header>
 		<div class="row">
 		<div class="4u 12u$(small)">
+		<h4>Google (2022)</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href="https://www.youtube.com/watch?v=ZEsnmcyuZEU"><img src="assets/images/production_gpp_2022.png" alt="" /></a></span>
+		</div>
+		<div class="4u 12u$(small)">
+		<h4></h4>
+		<p><i><br>
+		</i></p>
+		<!-- <span class="image fit"><a href="https://www.youtube.com/watch?v=ZEsnmcyuZEU"><img src="assets/images/production_gpp_2022.png" alt="" /></a></span> -->
+		</div>
+		<div class="4u 12u$(small)">
+		<h4>Instagram (2022)</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href=""><img src="assets/images/production_ig_2022.jpg" alt="" /></a></span>
+		</div>
+		</div>
+		<div class="row">
+		<div class="4u 12u$(small)">
 		<h4>OnePlus (2022)</h4>
 		<p><i>Music Composition and Production<br>
 		Composer - Sanjay Das</i></p>
@@ -33,8 +53,6 @@ description: Music Production | Composition
 		<span class="image fit"><a href="https://www.youtube.com/watch?v=joH3je2HrxA"><img src="assets/images/production_rvw_2022.jpeg" alt="" /></a></span>
 		</div>
 		</div>
-		<div class="row">
-
 		<div class="row">
 		<div class="4u 12u$(small)">
 		<h4>Philips (2022)</h4>

@@ -15,16 +15,36 @@ description: Music Production | Composition
 		</header>
 		<div class="row">
 		<div class="4u 12u$(small)">
-		<h4>Google (2022)</h4>
+		<h4>Vice x Audible DSOL</h4>
 		<p><i>Music Composition and Production<br>
 		Composer - Sanjay Das</i></p>
-		<span class="image fit"><a href="https://www.youtube.com/watch?v=ZEsnmcyuZEU"><img src="assets/images/production_gpp_2022.png" alt="" /></a></span>
+		<span class="image fit"><a href="https://www.youtube.com/watch?v=g1sPRhNqBsA"><img src="assets/images/production_DSOL_2022.jpg" alt="" /></a></span>
 		</div>
 		<div class="4u 12u$(small)">
 		<h4></h4>
 		<p><i><br>
 		</i></p>
-		<!-- <span class="image fit"><a href="https://www.youtube.com/watch?v=ZEsnmcyuZEU"><img src="assets/images/production_gpp_2022.png" alt="" /></a></span> -->
+		<!-- <span class="image fit"><a href=""><img src="assets/images/production_ig_2022.jpg" alt="" /></a></span> -->
+		</div>
+		<div class="4u 12u$(small)">
+		<h4>Vice x Audible DSOC (2022)</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href="https://www.youtube.com/watch?v=dFbxhaC75J0"><img src="assets/images/production_DSOC_2022.jpg" alt="" /></a></span>
+		</div>
+		</div>
+		<div class="row">
+		<div class="4u 12u$(small)">
+		<h4>MUAF (2022)</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href="https://www.instagram.com/p/Clxn0RJDTC0/"><img src="assets/images/production_MUAF_2022.jpg" alt="" /></a></span>
+		</div>
+		<div class="4u 12u$(small)">
+		<h4>Google (2022)</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href="https://www.youtube.com/watch?v=ZEsnmcyuZEU"><img src="assets/images/production_gpp_2022.png" alt="" /></a></span>
 		</div>
 		<div class="4u 12u$(small)">
 		<h4>Instagram (2022)</h4>

@@ -15,16 +15,36 @@ description: Music Production | Composition
 		</header>
 		<div class="row">
 		<div class="4u 12u$(small)">
+		<h4>Goodbye, Hello</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das, Satyajit Chatterji</i></p>
+		<span class="image fit"><a href=""><img src="assets/images/production_GH_2023.jpg" alt="" /></a></span>
+		</div>
+		<div class="4u 12u$(small)">
+		<h4>Upcoming VICE x Amazon Prime Video</h4>
+		<p><i>Music Composition and Supervision<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href=""><img src="" alt="" /></a></span>
+		</div>
+		<div class="4u 12u$(small)">
+		<h4>In No Sence</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href=""><img src="assets/images/production_IN_2023.png" alt="" /></a></span>
+		</div>
+		</div>
+		<div class="row">
+		<div class="4u 12u$(small)">
 		<h4>Vice x Audible DSOL</h4>
 		<p><i>Music Composition and Production<br>
 		Composer - Sanjay Das</i></p>
 		<span class="image fit"><a href="https://www.youtube.com/watch?v=g1sPRhNqBsA"><img src="assets/images/production_DSOL_2022.jpg" alt="" /></a></span>
 		</div>
 		<div class="4u 12u$(small)">
-		<h4></h4>
-		<p><i><br>
-		</i></p>
-		<!-- <span class="image fit"><a href=""><img src="assets/images/production_ig_2022.jpg" alt="" /></a></span> -->
+		<h4>Toothpari</h4>
+		<p><i>Additional Composition<br>
+		Composer - Neel Adhikari</i></p>
+		<span class="image fit"><a href=""><img src="assets/images/production_TP_2023.jpg" alt="" /></a></span>
 		</div>
 		<div class="4u 12u$(small)">
 		<h4>Vice x Audible DSOC (2022)</h4>

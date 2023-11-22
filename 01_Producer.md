@@ -18,19 +18,19 @@ description: Music Production | Composition
 		<h4>Goodbye, Hello</h4>
 		<p><i>Music Composition and Production<br>
 		Composer - Sanjay Das, Satyajit Chatterji</i></p>
-		<span class="image fit"><a href=""><img src="assets/images/production_GH_2023.jpg" alt="" /></a></span>
+		<span class="image fit"><a href="https://www.imdb.com/title/tt27216865/?ref_=fn_al_tt_4"><img src="assets/images/production_GH_2023.jpg" alt="" /></a></span>
 		</div>
 		<div class="4u 12u$(small)">
-		<h4>Upcoming VICE x Amazon Prime Video</h4>
+		<h4>Vice x Amazon Prime Rainbow Rishta</h4>
 		<p><i>Music Composition and Supervision<br>
 		Composer - Sanjay Das</i></p>
-		<span class="image fit"><a href=""><img src="" alt="" /></a></span>
+		<span class="image fit"><a href="https://www.imdb.com/title/tt29414624/"><img src="assets/images/production_RR_2023.jpg" alt="" /></a></span>
 		</div>
 		<div class="4u 12u$(small)">
 		<h4>In No Sence</h4>
 		<p><i>Music Composition and Production<br>
 		Composer - Sanjay Das</i></p>
-		<span class="image fit"><a href=""><img src="assets/images/production_IN_2023.png" alt="" /></a></span>
+		<span class="image fit"><a href="https://homegrown.co.in/homegrown-creators/short-film-in-no-sence-infuses-catharsis-within-the-journey-of-trauma-memory"><img src="assets/images/production_IN_2023.png" alt="" /></a></span>
 		</div>
 		</div>
 		<div class="row">
@@ -44,7 +44,7 @@ description: Music Production | Composition
 		<h4>Toothpari</h4>
 		<p><i>Additional Composition<br>
 		Composer - Neel Adhikari</i></p>
-		<span class="image fit"><a href=""><img src="assets/images/production_TP_2023.jpg" alt="" /></a></span>
+		<span class="image fit"><a href="https://www.imdb.com/title/tt27191658/"><img src="assets/images/production_TP_2023.jpg" alt="" /></a></span>
 		</div>
 		<div class="4u 12u$(small)">
 		<h4>Vice x Audible DSOC (2022)</h4>

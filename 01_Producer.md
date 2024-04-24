@@ -15,6 +15,26 @@ description: Music Production | Composition
 		</header>
 		<div class="row">
 		<div class="4u 12u$(small)">
+		<h4>FitPass</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das, Satyajit Chatterji</i></p>
+		<span class="image fit"><a href="https://www.youtube.com/watch?v=4ebU6lNAJRs"><img src="assets/images/production_FP_2024.jpg" alt="" /></a></span>
+		</div>
+		<div class="4u 12u$(small)">
+		<h4>Boat AirDopes</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href="https://www.instagram.com/p/C5IhV_QRU5L/"><img src="assets/images/production_boat_2024.jpg" alt="" /></a></span>
+		</div>
+		<div class="4u 12u$(small)">
+		<h4>Prestige</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href="https://www.instagram.com/p/C6DbIn7xvev/"><img src="assets/images/production_prestige_2024.jpg" alt="" /></a></span>
+		</div>
+		</div>
+		<div class="row">
+		<div class="4u 12u$(small)">
 		<h4>Goodbye, Hello</h4>
 		<p><i>Music Composition and Production<br>
 		Composer - Sanjay Das, Satyajit Chatterji</i></p>

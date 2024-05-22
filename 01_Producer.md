@@ -13,6 +13,14 @@ description: Music Production | Composition
 		<header class="major">
 			<h1>Media Composition</h1>
 		</header>
+		<div class="row" style="display: flex; justify-content: center;">
+		<div class="8u 12u$(small)">
+		<h4 style="display: flex; justify-content: center;">Durex</h4>
+		<p style="display: flex; justify-content: center;"><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href="https://www.youtube.com/watch?v=GogDfOiOsnE"><img src="assets/images/production_Durex_2024.png" alt="" /></a></span>
+		</div>
+		</div>
 		<div class="row">
 		<div class="4u 12u$(small)">
 		<h4>FitPass</h4>

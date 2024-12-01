@@ -14,11 +14,25 @@ description: Music Production | Composition
 			<h1>Media Composition</h1>
 		</header>
 		<div class="row">
-		<div class="4u 12u$(small)">
+		<div class="6u 12u$(small)">
+		<h4>Inecto</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href="https://vimeo.com/1031970418"><img src="assets/images/production_inecto_2024.png" alt="" /></a></span>
+		</div>
+		<div class="6u 12u$(small)">
 		<h4>Durex</h4>
 		<p><i>Music Composition and Production<br>
 		Composer - Sanjay Das</i></p>
 		<span class="image fit"><a href="https://www.youtube.com/watch?v=GogDfOiOsnE"><img src="assets/images/production_durex_2024.png" alt="" /></a></span>
+		</div>
+		</div>
+		<div class="row">
+		<div class="4u 12u$(small)">
+		<h4>Sephora</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href="https://www.instagram.com/reel/DBIuxxKtVjP/?utm_source=ig_web_copy_link"><img src="assets/images/production_sephora_2024.png" alt="" /></a></span>
 		</div>
 		<div class="4u 12u$(small)">
 		<h4>Bata</h4>

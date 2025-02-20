@@ -14,13 +14,19 @@ description: Music Production | Composition
 			<h1>Media Composition</h1>
 		</header>
 		<div class="row">
-		<div class="6u 12u$(small)">
+		<div class="4u 12u$(small)">
+		<h4>Ather</h4>
+		<p><i>Music Composition and Production<br>
+		Composer - Sanjay Das</i></p>
+		<span class="image fit"><a href="https://vimeo.com/1050751835"><img src="assets/images/production_ather_2024.png" alt="" /></a></span>
+		</div>
+		<div class="4u 12u$(small)">
 		<h4>Inecto</h4>
 		<p><i>Music Composition and Production<br>
 		Composer - Sanjay Das</i></p>
 		<span class="image fit"><a href="https://vimeo.com/1031970418"><img src="assets/images/production_inecto_2024.png" alt="" /></a></span>
 		</div>
-		<div class="6u 12u$(small)">
+		<div class="4u 12u$(small)">
 		<h4>Durex</h4>
 		<p><i>Music Composition and Production<br>
 		Composer - Sanjay Das</i></p>

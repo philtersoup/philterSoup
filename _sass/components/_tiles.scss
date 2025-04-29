@@ -5,7 +5,21 @@
 ///
 
 /* Tiles */
-
+	/* Make all header text align at the same vertical position */
+.tiles article header {
+	align-self: flex-start; /* Aligns all headers to the top */
+	margin-top: -3em; /* Adjust this value to position all headers at the same level */
+  }
+  
+  /* Or if you prefer to align them to the center */
+  .tiles article {
+	justify-content: center; /* Centers content vertically */
+  }
+  
+  .tiles article header {
+	padding-top: 0; /* Remove any top padding if present */
+	padding-bottom: 0; /* Remove any bottom padding if present */
+  }
 	.tiles {
 		@include vendor('display', 'flex');
 		@include vendor('flex-wrap', 'wrap');
@@ -29,9 +43,9 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 			cursor: default;
-			height: 40vh;
-			max-height: 40em;
-			min-height: 23em;
+			height: 20vh;
+			max-height: 20em;
+			min-height: 20em;
 			overflow: hidden;
 			position: relative;
 			width: 40%;
@@ -103,8 +117,10 @@
 			}
 
 			&:nth-child(4n - 1),
-			&:nth-child(4n - 2) {
-				width: 60%;
+			&:nth-child(4n - 2),
+			&:nth-child(4n - 3),
+			&:nth-child(4n - 4), {
+				width: 25%;
 			}
 
 			&:nth-child(6n - 5) {

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Creative Technologist
-description: Computational Art | Physical Computing
+description: Computational Art & Design 
 ---
 
 <!-- Main -->

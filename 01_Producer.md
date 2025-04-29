@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Producer & Media Composer
-description: Music Production | Composition
+title: Media Composition
+description: Music Production & Composition
 ---
 
 <!-- Main -->
@@ -14,31 +14,51 @@ description: Music Production | Composition
 			<h1>Media Composition</h1>
 		</header>
 		<div class="row">
-		<div class="4u 12u$(small)">
-		<h4>Ather</h4>
-		<p><i>Music Composition and Production<br>
-		Composer - Sanjay Das</i></p>
-		<span class="image fit"><a href="https://vimeo.com/1050751835"><img src="assets/images/production_ather_2024.png" alt="" /></a></span>
-		</div>
-		<div class="4u 12u$(small)">
-		<h4>Inecto</h4>
-		<p><i>Music Composition and Production<br>
-		Composer - Sanjay Das</i></p>
-		<span class="image fit"><a href="https://vimeo.com/1031970418"><img src="assets/images/production_inecto_2024.png" alt="" /></a></span>
-		</div>
-		<div class="4u 12u$(small)">
-		<h4>Durex</h4>
-		<p><i>Music Composition and Production<br>
-		Composer - Sanjay Das</i></p>
-		<span class="image fit"><a href="https://www.youtube.com/watch?v=GogDfOiOsnE"><img src="assets/images/production_durex_2024.png" alt="" /></a></span>
-		</div>
+			<div class="4u 12u$(small)">
+					<h4>LovETC</h4>
+					<p><i>Music Composition and Production<br>
+					Composer - Sanjay Das</i></p>
+					<span class="image fit"><a href="https://www.youtube.com/watch?v=bN53m_voMdA"><img src="assets/images/production_lovetc_2025.png" alt="" /></a></span>
+			</div>
+			<div class="4u 12u$(small)">
+				<h4>RCB x Qatar Airways</h4>
+				<p><i>Music Composition and Production<br>
+				Composer - Sanjay Das</i></p>
+				<span class="image fit"><a href="https://www.youtube.com/watch?v=NMLw3zU1UeQ"><img src="assets/images/production_rcb_2025.png" alt="" /></a></span>
+			</div>
+			<div class="4u 12u$(small)">
+				<h4>Gitam</h4>
+				<p><i>Music Composition and Production<br>
+				Composer - Sanjay Das</i></p>
+				<span class="image fit"><a href="https://www.instagram.com/p/DH5GtE3RWi1/"><img src="assets/images/production_gitam_2025.png" alt="" /></a></span>
+			</div>
 		</div>
 		<div class="row">
-		<div class="4u 12u$(small)">
-		<h4>Sephora</h4>
-		<p><i>Music Composition and Production<br>
-		Composer - Sanjay Das</i></p>
-		<span class="image fit"><a href="https://www.instagram.com/reel/DBIuxxKtVjP/?utm_source=ig_web_copy_link"><img src="assets/images/production_sephora_2024.png" alt="" /></a></span>
+			<div class="4u 12u$(small)">
+				<h4>Ather</h4>
+				<p><i>Music Composition and Production<br>
+				Composer - Sanjay Das</i></p>
+				<span class="image fit"><a href="https://vimeo.com/1050751835"><img src="assets/images/production_ather_2024.png" alt="" /></a></span>
+			</div>
+			<div class="4u 12u$(small)">
+				<h4>Inecto</h4>
+				<p><i>Music Composition and Production<br>
+				Composer - Sanjay Das</i></p>
+				<span class="image fit"><a href="https://vimeo.com/1031970418"><img src="assets/images/production_inecto_2024.png" alt="" /></a></span>
+			</div>
+			<div class="4u 12u$(small)">
+				<h4>Durex</h4>
+				<p><i>Music Composition and Production<br>
+				Composer - Sanjay Das</i></p>
+				<span class="image fit"><a href="https://www.youtube.com/watch?v=GogDfOiOsnE"><img src="assets/images/production_durex_2024.png" alt="" /></a></span>
+			</div>
+		</div>
+			<div class="row">
+			<div class="4u 12u$(small)">
+			<h4>Sephora</h4>
+			<p><i>Music Composition and Production<br>
+			Composer - Sanjay Das</i></p>
+			<span class="image fit"><a href="https://www.instagram.com/reel/DBIuxxKtVjP/?utm_source=ig_web_copy_link"><img src="assets/images/production_sephora_2024.png" alt="" /></a></span>
 		</div>
 		<div class="4u 12u$(small)">
 		<h4>Bata</h4>
@@ -361,93 +381,7 @@ description: Music Production | Composition
 <!-- Content -->
 <!-- <h2 id="content">Sample Content</h2> -->
 
-<hr class="major" />
 
-<!-- One -->
-<section id="two">
-	<div class="inner">
-		<header class="major">
-			<h1>Releases</h1>
-		</header>
-
-<!-- Content -->
-<!-- <h2 id="content">Sample Content</h2> -->
-<div class="row">
-	<div class="4u 12u$(small)">
-		<h3>Sherry (2021)</h3>
-		<span class="image fit"><a href="https://open.spotify.com/album/1opdrsBpYL0DsbzMxkisA7?si=vO4u0YUmRSGwfQsNR2XuYg"><img src="assets/images/Releases/soulcurry.png" alt="" /> </a></span>
-	</div>
-	<div class="4u 12u$(small)">
-		<h3>Decoherence (2020)</h3>
-		<span class="image fit"><a href="https://open.spotify.com/album/1opdrsBpYL0DsbzMxkisA7?si=vO4u0YUmRSGwfQsNR2XuYg"><img src="assets/images/Releases/philterSoup_Decoherence_Cover.jpg" alt="" /> </a></span>
-	</div>
-	<div class="4u 12u$(small)">
-		<h3>Zaphod's Dilemma (2020)</h3>
-		<span class="image fit"><a href = "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiF48WYy67sAhXuyDgGHcZMDcUQFjADegQIAxAC&url=https%3A%2F%2Fopen.spotify.com%2Ftrack%2F3c6NGk9e8c8qpuTnag157d&usg=AOvVaw2hzx67orJzzGh37i-k9G6b"> <img src="assets/images/Releases/Zaphod's Dilemma.png" alt="" /> </a></span>
-	</div>
-	<div class="4u 12u$(small)">
-		<h3>Trilogy of Five (2019)</h3>
-		<span class="image fit"><a href = "https://open.spotify.com/album/7w7WOG1zoBOSFa8onWPgZI?si=Kczee1QKTCizhzo73yskIw"><img src="assets/images/Releases/sqyareArtboard 1.jpg" alt="" /></a></span>
-	</div>
-<div class="row">
-	<div class="4u 12u$(small)">
-		<h3>Social Isolation I (2020)</h3>
-		<span class="image fit"><a href="https://socialisolation.bandcamp.com/album/social-isolation"><img src="assets/images/Releases/SO_I.jpg" alt="" /> </a></span>
-	</div>
-	<div class="4u 12u$(small)">
-		<h3>Social Isolation II (2020)</h3>
-		<span class="image fit"><a href = "https://socialisolation.bandcamp.com/album/social-isolation-ii"> <img src="assets/images/Releases/SO_II.jpg" alt="" /> </a></span>
-	</div>
-	<div class="4u 12u$(small)">
-		<h3>Peninsula Volume 1 (2019)</h3>
-		<span class="image fit"><a href = "https://liquidfrequency.bandcamp.com/album/peninsula-volume-1"><img src="assets/images/Releases/PeninsulaSounds.jpg" alt="" /></a></span>
-	</div>
-</div>
-</div>
-<hr class="major" />
-
-<!-- //---ENGINEERING--// -->
-
-<section id="one">
-	<div class="inner">
-		<header class="major">
-			<h1>Production & Engineering</h1>
-		</header>
-<div class="row">
-	<div class="4u 12u$(small)">
-	<h3>Doktor Gandu: Republic of Gandu</h3>
-	<p><i>Producer, Mix Engineer</i></p>
-	<span class="image fit"><a href="https://open.spotify.com/album/7pYkibphzASnSnu0W8V7Ea?autoplay=true"><img src="assets/images/eng_ROG_2019.jpg"></a></span>
-	</div>
-	<div class="4u 12u$(small)">
-		<h3>Park Street Local EP </h3>
-		<p><i>Producer, Mix Engineer</i></p>
-		<span class="image fit"><a href="https://open.spotify.com/album/6wD4ryXeaDzzoNg3EV3nU0?autoplay=true"><img src="assets/images/eng_psEP_2017.jpg" alt="" /></a></span>
-	</div>
-	<div class="4u 12u$(small)">
-		<h3>Ganesh Talkies: GIFS </h3>
-		<p><i>Recording Engineer</i></p>
-		<span class="image fit"><a href="https://soundcloud.com/ganeshtalkies/sets/the-great-indian-freak-show-1"><img src="assets/images/eng_gt_2017.jpg"></a></span>
-	</div>
-</div>
-<div class="row">
-	<div class="4u 12u$(small)">
-		<h3>Run It's the Kid</h3>
-		<p><i>Recording Engineer</i></p> 
-		<span class="image fit"><a href="https://open.spotify.com/album/1ebuyU0s1z7ePoD89Xwhwz"><img src="assets/images/eng_ritk_2016.jpg" alt="" /></a></span>
-	</div>
-	<div class="4u 12u$(small)">
-		<h3>The Supersonics: Heads Up</h3>
-		<p><i>Recording Engineer</i></p>
-		<span class="image fit"><a href="https://open.spotify.com/album/10JvdLwcuQ4C649WMt8k63"><img src="assets/images/eng_ss_2015.jpg" alt="" /></a></span>
-	</div>
-	<div class="4u 12u$(small)">
-		<h3>Ganesh Talkies: In Technicolor</h3>
-		<p><i>Recording Engineer</i></p>
-		<span class="image fit"><a href="https://open.spotify.com/album/6le4rEZxROpwKmy4nxhK0x"><img src="assets/images/eng_gt_2014.jpg" alt="" /></a></span>
-	</div>
-</div>
-<hr class="major" />
 
 <footer id="footer">
 		<div class="inner">

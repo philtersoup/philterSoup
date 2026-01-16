@@ -15,9 +15,11 @@ export default function Navigation() {
         { name: "Discography", path: "/discography" },
     ];
 
+    if (pathname === '/') return null;
+
     return (
         <nav className="fixed top-0 left-0 w-full z-50 p-6 flex justify-between items-center mix-blend-difference text-white">
-            <Link href="/" className="text-2xl font-bold font-syne tracking-tighter hover:scale-105 transition-transform">
+            <Link href="/" className="text-2xl font-bold font-blackout tracking-tighter hover:scale-105 transition-transform">
                 philterSoup
             </Link>
 
@@ -28,7 +30,7 @@ export default function Navigation() {
                         <Link
                             key={item.path}
                             href={item.path}
-                            className={`uppercase text-xs tracking-widest hover:underline decoration-wavy underline-offset-4 transition-all ${pathname === item.path ? "underline" : ""
+                            className={`uppercase font-blackout text-sm tracking-widest hover:underline decoration-wavy underline-offset-4 transition-all ${pathname === item.path ? "underline" : ""
                                 }`}
                         >
                             {item.name}

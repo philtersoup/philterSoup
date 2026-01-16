@@ -25,6 +25,12 @@ body {
   overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-blackout);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -36,4 +42,24 @@ body {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+}
+
+@keyframes wave-flash {
+  0% {
+    color: rgba(255, 255, 255, 0);
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  }
+  20% {
+    color: rgba(255, 255, 255, 1);
+    /* Reduced shadow complexity for performance */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6); 
+  }
+  100% {
+    color: rgba(255, 255, 255, 0);
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  }
+}
+
+.animate-wave-flash {
+  animation: wave-flash 0.6s ease-in-out forwards;
 }

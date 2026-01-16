@@ -5,6 +5,7 @@ export interface Project {
     composer: string;
     year: string;
     image: string;
+    images?: string[];
     link?: string;
     category?: string;
 }

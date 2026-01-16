@@ -247,7 +247,12 @@
     "year": "2024",
     "image": "/assets/images/crp_aes_2017.jpg",
     "link": "",
-    "category": "Creative Technology"
+    "category": "Creative Technology",
+    "images": [
+      "/assets/images/crp_aes_2017.jpg",
+      "/assets/images/crp_aes_2017_1.jpg",
+      "/assets/images/crp_aes_2017_2.jpg"
+    ]
   },
   {
     "id": "red-bull-music-academy-diggin-in-the-carts-2024",
@@ -257,7 +262,12 @@
     "year": "2024",
     "image": "/assets/images/crp_rbma_2017.jpg",
     "link": "",
-    "category": "Creative Technology"
+    "category": "Creative Technology",
+    "images": [
+      "/assets/images/crp_rbma_2017.jpg",
+      "/assets/images/crp_rbma_2017_2.jpg",
+      "/assets/images/crp_rbma_2017_3.jpg"
+    ]
   },
   {
     "id": "shakespeare-i-in-5-1-i-2024",
@@ -267,7 +277,13 @@
     "year": "2024",
     "image": "/assets/images/crp_s51_2017.jpg",
     "link": "",
-    "category": "Creative Technology"
+    "category": "Creative Technology",
+    "images": [
+      "/assets/images/crp_s51_2017.jpg",
+      "/assets/images/crp_s51_2017_1.jpg",
+      "/assets/images/crp_s51_2017_2.jpg",
+      "/assets/images/crp_s51_2017_3.jpg"
+    ]
   },
   {
     "id": "systems-2024",
@@ -277,7 +293,12 @@
     "year": "2024",
     "image": "/assets/images/crp_flock_2017.png",
     "link": "",
-    "category": "Creative Technology"
+    "category": "Creative Technology",
+    "images": [
+      "/assets/images/crp_flock_2017.png",
+      "/assets/images/crp_flock_2017_1.png",
+      "/assets/images/crp_flock_2017_2.png"
+    ]
   },
   {
     "id": "voltage-controlled-video-matrix-2024",
@@ -287,7 +308,12 @@
     "year": "2024",
     "image": "/assets/images/crp_vcvm.png",
     "link": "https://twitter.com/philterSoup",
-    "category": "Creative Technology"
+    "category": "Creative Technology",
+    "images": [
+      "/assets/images/crp_vcvm.png",
+      "/assets/images/crp_vcvm_2.png",
+      "/assets/images/crp_vcvm_3.png"
+    ]
   },
   {
     "id": "all-we-imagine-as-light",

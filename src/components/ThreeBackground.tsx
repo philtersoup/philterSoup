@@ -7,25 +7,24 @@ import * as THREE from "three";
 
 // Configuration
 const FONT_URL = "/assets/fonts/Blackout Midnight.ttf";
-const ROWS = 10;
-const ROW_HEIGHT = 1.3;
-const MAX_OPACITY = 0.4; // Significantly brighter default state
+const ROWS = 20;
+const ROW_HEIGHT = 0.8;
+const FONT_SIZE = 0.9;
+const MAX_OPACITY = 0.4;
 
 // -------------------------------------------------------------
 // CUSTOM SHADER MATERIAL
-// Supports multiple wipe modes driven by 'uMode'
 // -------------------------------------------------------------
 const FillShaderMaterial = new THREE.ShaderMaterial({
     uniforms: {
         uTime: { value: 0 },
         uTriggerTime: { value: 0 },
-        uMode: { value: 0 }, // 0: Radial Out, 1: Radial In, 2: Horizontal Wipe
+        uMode: { value: 0 },
         color: { value: new THREE.Color("white") }
     },
     vertexShader: `
       varying vec2 vGlobalPos;
       void main() {
-        // Calculate global position for screen-space effects
         vec4 worldPosition = modelMatrix * vec4(position, 1.0);
         vGlobalPos = worldPosition.xy;
         gl_Position = projectionMatrix * viewMatrix * worldPosition;
@@ -34,7 +33,7 @@ const FillShaderMaterial = new THREE.ShaderMaterial({
     fragmentShader: `
       uniform float uTime;
       uniform float uTriggerTime;
-      uniform int uMode; // Randomly selected mode
+      uniform int uMode; 
       uniform vec3 color;
       varying vec2 vGlobalPos;
 
@@ -43,56 +42,54 @@ const FillShaderMaterial = new THREE.ShaderMaterial({
         
         if (uTriggerTime > 0.0) {
             float timeSince = uTime - uTriggerTime;
+            float speedBase = 55.0; 
             
             // --- MODE 0: RADIAL EXPAND (Center -> Out) ---
             if (uMode == 0) {
-                float speed = 35.0;
-                float waveHead = timeSince * speed;
-                float waveWidth = 30.0;
+                float waveHead = timeSince * speedBase;
+                float waveWidth = 35.0;
                 float dist = length(vGlobalPos);
                 
-                // Solid band
                 if (dist < waveHead && dist > (waveHead - waveWidth)) {
                    alpha = 1.0;
                    // Fade out tail
                    float tailPos = waveHead - waveWidth;
-                   alpha *= smoothstep(tailPos, tailPos + 5.0, dist); 
-                   // Fade out head
-                   alpha *= smoothstep(waveHead, waveHead - 2.0, dist);
+                   alpha *= smoothstep(tailPos, tailPos + 8.0, dist); 
+                   // Sharp head
+                   alpha *= smoothstep(waveHead, waveHead - 1.0, dist);
                 }
             }
             
             // --- MODE 1: RADIAL CONTRACT (Out -> Center) ---
             else if (uMode == 1) {
-                float speed = 35.0;
-                float maxDist = 50.0; // Start far out
-                float waveHead = maxDist - (timeSince * speed);
-                float waveWidth = 30.0;
+                float maxDist = 55.0; 
+                float waveHead = maxDist - (timeSince * speedBase);
+                float waveWidth = 35.0;
                 float dist = length(vGlobalPos);
                 
+                // Inverse logic: Wave comes IN
                 if (dist < (waveHead + waveWidth) && dist > waveHead) {
                     alpha = 1.0;
                     alpha *= smoothstep(waveHead, waveHead + 2.0, dist);
-                    alpha *= smoothstep(waveHead + waveWidth, waveHead + waveWidth - 5.0, dist);
+                    alpha *= smoothstep(waveHead + waveWidth, waveHead + waveWidth - 8.0, dist);
                 }
             }
             
             // --- MODE 2: HORIZONTAL SLICE (Left -> Right) ---
             else if (uMode == 2) {
-                float speed = 40.0;
-                float startX = -40.0;
-                float waveHead = startX + (timeSince * speed * 1.5);
-                float waveWidth = 25.0;
+                float speed = speedBase * 1.2;
+                float startX = -50.0;
+                float waveHead = startX + (timeSince * speed);
+                float waveWidth = 30.0;
                 
                 if (vGlobalPos.x < waveHead && vGlobalPos.x > (waveHead - waveWidth)) {
                     alpha = 1.0;
-                    alpha *= smoothstep(waveHead - waveWidth, waveHead - waveWidth + 5.0, vGlobalPos.x);
-                    alpha *= smoothstep(waveHead, waveHead - 2.0, vGlobalPos.x);
+                    alpha *= smoothstep(waveHead - waveWidth, waveHead - waveWidth + 8.0, vGlobalPos.x);
+                    alpha *= smoothstep(waveHead, waveHead - 1.0, vGlobalPos.x);
                 }
             }
         }
         
-        // Final Output
         gl_FragColor = vec4(color, alpha);
       }
     `,
@@ -103,14 +100,17 @@ const FillShaderMaterial = new THREE.ShaderMaterial({
 
 
 function MovingRow({ text, y, velocity }: { text: string, y: number, velocity: number }) {
+    // Repeat text more times for denser rows
+    const repeatedText = `${text} ${text} ${text} ${text} ${text}`;
+
     return (
         <AnimatedGroup y={y} velocity={velocity}>
-            {/* Layer 1: Outline (Always visible) */}
+            {/* Layer 1: Outline (Static Opacity) */}
             <Text
                 font={FONT_URL}
-                fontSize={1.5}
+                fontSize={FONT_SIZE}
                 letterSpacing={-0.02}
-                lineHeight={0.85}
+                lineHeight={1}
                 color="white"
                 fillOpacity={0}
                 strokeWidth={0.02}
@@ -120,22 +120,22 @@ function MovingRow({ text, y, velocity }: { text: string, y: number, velocity: n
                 anchorY="middle"
                 renderOrder={1}
             >
-                {`${text} ${text} ${text}`}
+                {repeatedText}
             </Text>
 
             {/* Layer 2: Dynamic Fill (Shader) */}
             <Text
                 font={FONT_URL}
-                fontSize={1.5}
+                fontSize={FONT_SIZE}
                 letterSpacing={-0.02}
-                lineHeight={0.85}
+                lineHeight={1}
                 material={FillShaderMaterial}
                 anchorX="center"
                 anchorY="middle"
                 position={[0, 0, 0.02]}
                 renderOrder={2}
             >
-                {`${text} ${text} ${text}`}
+                {repeatedText}
             </Text>
         </AnimatedGroup>
     );
@@ -163,19 +163,15 @@ function Composition({ text }: { text: string }) {
 
     // Internal state
     const [displayedText, setDisplayedText] = useState(text);
-    const [isTransitioning, setIsTransitioning] = useState(false);
 
-    // Trigger Transition
+    // Trigger Transition logic
     useEffect(() => {
         if (text !== displayedText) {
-            setIsTransitioning(true);
             setDisplayedText(text);
 
-            // Randomize the effect mode (0, 1, or 2)
+            // Trigger Wipe
             const nextMode = Math.floor(Math.random() * 3);
             FillShaderMaterial.uniforms.uMode.value = nextMode;
-
-            // Reset Trigger Time to NOW
             FillShaderMaterial.uniforms.uTriggerTime.value = clock.getElapsedTime();
         }
     }, [text, displayedText, clock]);
@@ -187,7 +183,7 @@ function Composition({ text }: { text: string }) {
     const rows = useMemo(() => {
         return Array.from({ length: ROWS }).map((_, i) => {
             const dir = i % 2 === 0 ? -1 : 1;
-            const speed = 2.0;
+            const speed = 2.5;
             const y = (i - ROWS / 2) * ROW_HEIGHT + 0.6;
             return { id: i, y, velocity: dir * speed };
         });

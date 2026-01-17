@@ -7,15 +7,18 @@ import { Project } from "@/lib/types";
 interface ProjectCardProps {
     project: Project;
     index: number;
+    aspect?: "video" | "square";
 }
 
-export default function ProjectCard({ project, index }: ProjectCardProps) {
-    // Deterministic rotation based on index to avoid hydration mismatch and useEffect
+export default function ProjectCard({ project, index, aspect = "video" }: ProjectCardProps) {
+    // Deterministic rotation based on index
     const rotation = (index % 2 === 0 ? 1 : -1) * ((index % 3) * 0.5 + 0.5);
 
+    const aspectRatioClass = aspect === "square" ? "aspect-square" : "aspect-video";
+
     const CardContent = (
-        <div className="relative overflow-hidden rounded-lg bg-gray-900 shadow-xl transition-all duration-300 group-hover:shadow-2xl">
-            <div className="relative aspect-video w-full overflow-hidden">
+        <div className="relative overflow-hidden rounded-lg bg-gray-900 shadow-xl transition-all duration-300 group-hover:shadow-2xl h-full">
+            <div className={`relative ${aspectRatioClass} w-full overflow-hidden`}>
                 <Image
                     src={project.image}
                     alt={project.title}
@@ -25,8 +28,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 />
             </div>
 
-            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col justify-end p-6">
-                <h3 className="text-2xl font-bold text-white mb-1 translate-y-4 transition-transform duration-300 group-hover:translate-y-0">{project.title}</h3>
+            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col justify-end p-6 pointer-events-none">
+                <h3 className="text-2xl font-bold text-white mb-1 translate-y-4 transition-transform duration-300 group-hover:translate-y-0 text-shadow-sm">{project.title}</h3>
                 <div className="translate-y-4 transition-transform duration-300 delay-75 group-hover:translate-y-0">
                     <p className="text-gray-300 text-sm font-light">{project.role}</p>
                     {project.composer && (
@@ -50,10 +53,15 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
             whileHover={{ y: -8, scale: 1.02, rotate: rotation }}
-            className={`group relative ${project.link ? 'cursor-pointer' : ''} will-change-transform`}
+            className={`group relative ${project.link ? 'cursor-pointer' : ''} will-change-transform h-full`}
         >
             {project.link ? (
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="block outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-lg">
+                <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-lg h-full relative z-10"
+                >
                     {CardContent}
                 </a>
             ) : (

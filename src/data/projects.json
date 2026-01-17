@@ -1,5 +1,45 @@
 [
   {
+    "id": "lights-on-2025",
+    "title": "LIGHTS ON",
+    "role": "Album - Composition, Production & Mix",
+    "composer": "Sanjay Das",
+    "year": "2025",
+    "image": "/assets/images/Releases/lights_on.jpg",
+    "link": "https://open.spotify.com/search/philterSoup%20LIGHTS%20ON",
+    "category": "Discography"
+  },
+  {
+    "id": "morning-light-2024",
+    "title": "Morning Light",
+    "role": "Single",
+    "composer": "Sanjay Das",
+    "year": "2024",
+    "image": "/assets/images/Releases/morning_light.jpg",
+    "link": "https://open.spotify.com/search/philterSoup%20MORNING%20LIGHT",
+    "category": "Discography"
+  },
+  {
+    "id": "long-gone-2023",
+    "title": "Long Gone",
+    "role": "Single - Feat. Karshni",
+    "composer": "Sanjay Das",
+    "year": "2023",
+    "image": "/assets/images/Releases/long_gone.jpg",
+    "link": "https://open.spotify.com/search/philterSoup%20Long%20Gone",
+    "category": "Discography"
+  },
+  {
+    "id": "emersion-2022",
+    "title": "Emersion",
+    "role": "EP - w/ SAT",
+    "composer": "Sanjay Das & Satyajit Chatterji",
+    "year": "2022",
+    "image": "/assets/images/Releases/emersion_cover.jpg",
+    "link": "https://open.spotify.com/search/philterSoup%20Emersion",
+    "category": "Discography"
+  },
+  {
     "id": "scapia-2025",
     "title": "Scapia",
     "role": "Music Composition and Production",

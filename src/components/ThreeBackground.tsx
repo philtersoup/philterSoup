@@ -10,7 +10,7 @@ const FONT_URL = "/assets/fonts/Blackout Midnight.ttf";
 const ROWS = 20;
 const ROW_HEIGHT = 0.8;
 const FONT_SIZE = 0.9;
-const MAX_OPACITY = 0.4;
+const MAX_OPACITY = 0.15; // Lowered opacity
 
 // -------------------------------------------------------------
 // CUSTOM SHADER MATERIAL
@@ -20,7 +20,7 @@ const FillShaderMaterial = new THREE.ShaderMaterial({
         uTime: { value: 0 },
         uTriggerTime: { value: 0 },
         uMode: { value: 0 },
-        color: { value: new THREE.Color("white") }
+        color: { value: new THREE.Color("#aaaaaa") } // Darker white/grey
     },
     vertexShader: `
       varying vec2 vGlobalPos;
@@ -91,7 +91,7 @@ const FillShaderMaterial = new THREE.ShaderMaterial({
         }
         
         gl_FragColor = vec4(color, alpha);
-      }
+    }
     `,
     transparent: true,
     depthWrite: false,
@@ -105,7 +105,7 @@ function MovingRow({ text, y, velocity }: { text: string, y: number, velocity: n
 
     return (
         <AnimatedGroup y={y} velocity={velocity}>
-            {/* Layer 1: Outline (Static Opacity) */}
+            {/* Layer 1: Outline (Static Opacity) - Reduced Opacity per request */}
             <Text
                 font={FONT_URL}
                 fontSize={FONT_SIZE}
@@ -122,6 +122,7 @@ function MovingRow({ text, y, velocity }: { text: string, y: number, velocity: n
             >
                 {repeatedText}
             </Text>
+
 
             {/* Layer 2: Dynamic Fill (Shader) */}
             <Text
@@ -206,7 +207,7 @@ function Composition({ text }: { text: string }) {
 export default function ThreeBackground({ text = "PHILTERSOUP" }: { text?: string }) {
     return (
         <div className="fixed inset-0 z-0 bg-black pointer-events-none select-none">
-            <div className="absolute inset-0 z-10 bg-linear-to-b from-black/80 via-transparent to-black/80 pointer-events-none" />
+            <div className="absolute inset-0 z-10 bg-linear-to-b from-black/20 via-transparent to-black/20 pointer-events-none" />
 
             <Canvas
                 camera={{ position: [0, 0, 10], fov: 45 }}

@@ -52,7 +52,10 @@ export default function Home() {
 
           </div>
           {/* Navigation Stack */}
-          <div className="flex flex-col gap-4 w-full max-w-4xl mx-auto">
+          <div
+            className="flex flex-col gap-4 w-full max-w-4xl mx-auto"
+            onMouseLeave={() => setBackgroundText("PHILTERSOUP")}
+          >
             {sections.map((section, index) => (
               <motion.div
                 key={section.href}
@@ -61,7 +64,6 @@ export default function Home() {
                 transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
                 className="w-full"
                 onMouseEnter={() => setBackgroundText(section.title.toUpperCase())}
-                onMouseLeave={() => setBackgroundText("PHILTERSOUP")}
               >
                 <Link
                   href={section.href}

@@ -9,3 +9,16 @@ export interface Project {
     link?: string;
     category?: string;
 }
+
+export interface PressItem {
+    id: string;
+    title: string;
+    publication: string;
+    date: string;
+    excerpt: string;
+    link: string;
+}
+
+export type GridItem =
+    | ({ type: 'project' } & Project)
+    | ({ type: 'press' } & PressItem);

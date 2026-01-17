@@ -28,18 +28,18 @@ export default function ProjectCard({ project, index, aspect = "video" }: Projec
                 />
             </div>
 
-            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col justify-end p-6 pointer-events-none">
-                <h3 className="text-2xl font-bold text-white mb-1 translate-y-4 transition-transform duration-300 group-hover:translate-y-0 text-shadow-sm">{project.title}</h3>
+            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col justify-end p-4 md:p-6 pointer-events-none">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-1 translate-y-4 transition-transform duration-300 group-hover:translate-y-0 text-shadow-sm">{project.title}</h3>
                 <div className="translate-y-4 transition-transform duration-300 delay-75 group-hover:translate-y-0">
-                    <p className="text-gray-300 text-sm font-light">{project.role}</p>
+                    <p className="text-gray-300 text-xs md:text-sm font-light">{project.role}</p>
                     {project.composer && (
-                        <p className="text-gray-400 text-xs font-mono mt-0.5">Composer - {project.composer}</p>
+                        <p className="text-gray-400 text-[10px] md:text-xs font-mono mt-0.5">Composer - {project.composer}</p>
                     )}
                 </div>
                 <div className="flex justify-between items-center mt-2 translate-y-4 transition-transform duration-300 delay-100 group-hover:translate-y-0">
-                    <span className="text-sm font-blackout text-gray-500 uppercase tracking-widest">{project.year}</span>
+                    <span className="text-xs md:text-sm font-blackout text-gray-500 uppercase tracking-widest">{project.year}</span>
                     {project.link && (
-                        <span className="text-sm font-blackout text-white border border-white/30 px-2 py-1 rounded-full bg-black/60 backdrop-blur-sm">View &rarr;</span>
+                        <span className="text-xs md:text-sm font-blackout text-white border border-white/30 px-2 py-1 rounded-full bg-black/60 backdrop-blur-sm">View &rarr;</span>
                     )}
                 </div>
             </div>

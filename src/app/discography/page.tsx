@@ -52,9 +52,13 @@ export default async function DiscographyPage() {
 
     return (
         <main className="min-h-screen bg-black text-white">
-            <header className="pt-24 pb-4 px-4 md:px-12">
-                <h1 className="font-syne text-6xl md:text-8xl font-bold text-white mb-4">Discography</h1>
-                <p className="text-gray-400 text-xl font-light max-w-2xl">Releases & Reviews</p>
+            <header className="pt-32 pb-12 px-4 md:px-12 max-w-[1600px] mx-auto text-center md:text-left">
+                <h1 className="font-blackout text-5xl md:text-8xl lg:text-[8rem] leading-[0.85] font-bold text-white mb-8">
+                    RELEASES<br /><span className="text-red-600 outline-text">& REVIEWS</span>
+                </h1>
+                <p className="text-gray-400 text-lg md:text-xl font-light max-w-2xl border-l-0 md:border-l-2 border-red-600 pl-0 md:pl-6 mx-auto md:mx-0">
+                    Discography & Press Clippings
+                </p>
             </header>
 
             <MixedGrid items={items} />

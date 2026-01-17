@@ -83,11 +83,22 @@ export default function Home() {
     const isMobile = window.innerWidth < 768;
     if (!isMobile) return;
 
+    // Create a cycle that alternates between "PHILTERSOUP" and section titles
+    // This ensures "PHILTERSOUP" is visible 50% of the time (the "default" state)
+    const cycleSequence: string[] = [];
+    sections.forEach(section => {
+      cycleSequence.push("PHILTERSOUP");
+      cycleSequence.push(section.title.toUpperCase());
+    });
+
     let currentIndex = 0;
+    // Set initial state
+    setBackgroundText(cycleSequence[0]);
+
     const interval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % sections.length;
-      setBackgroundText(sections[currentIndex].title.toUpperCase());
-    }, 3000); // 3 seconds cycle
+      currentIndex = (currentIndex + 1) % cycleSequence.length;
+      setBackgroundText(cycleSequence[currentIndex]);
+    }, 3000); // 3 seconds per text
 
     return () => clearInterval(interval);
   }, []);

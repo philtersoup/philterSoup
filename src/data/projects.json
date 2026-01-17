@@ -40,42 +40,22 @@
     "category": "Discography"
   },
   {
-    "id": "scapia-2025",
-    "title": "Scapia",
+    "id": "lotto-2025",
+    "title": "Lotto",
     "role": "Music Composition and Production",
-    "composer": "Sanjay Das",
+    "composer": "Sanjay Das & Rounak Maiti",
     "year": "2025",
-    "image": "/assets/images/production_scapia_2025.png",
-    "link": "",
+    "image": "/assets/images/production_lotto_2025.png",
+    "link": "https://www.youtube.com/watch?v=UNmgLNVsUWc",
     "category": "Production"
   },
   {
-    "id": "ikea-2025",
-    "title": "IKEA",
+    "id": "debeers-2025",
+    "title": "DeBeers",
     "role": "Music Composition and Production",
     "composer": "Sanjay Das",
     "year": "2025",
-    "image": "/assets/images/production_ikea_2025.png",
-    "link": "",
-    "category": "Production"
-  },
-  {
-    "id": "irth-2025",
-    "title": "Irth",
-    "role": "Music Composition and Production",
-    "composer": "Sanjay Das",
-    "year": "2025",
-    "image": "/assets/images/production_irth_2025.png",
-    "link": "",
-    "category": "Production"
-  },
-  {
-    "id": "creta-2025",
-    "title": "Creta",
-    "role": "Music Composition and Production",
-    "composer": "Sanjay Das",
-    "year": "2025",
-    "image": "/assets/images/production_creta_2025.png",
+    "image": "/assets/images/production_debeers_2025.png",
     "link": "",
     "category": "Production"
   },
@@ -90,22 +70,22 @@
     "category": "Production"
   },
   {
-    "id": "debeers-2025",
-    "title": "DeBeers",
+    "id": "air-india-2025",
+    "title": "Air India",
     "role": "Music Composition and Production",
-    "composer": "Sanjay Das",
+    "composer": "Sanjay Das & Rounak Maiti",
     "year": "2025",
-    "image": "/assets/images/production_debeers_2025.png",
+    "image": "/assets/images/production_airindia_2025.png",
     "link": "",
     "category": "Production"
   },
   {
-    "id": "air-india-2025",
-    "title": "Air India",
+    "id": "irth-2025",
+    "title": "Irth",
     "role": "Music Composition and Production",
-    "composer": "Sanjay Das",
+    "composer": "Sanjay Das & Rounak Maiti",
     "year": "2025",
-    "image": "/assets/images/production_airindia_2025.png",
+    "image": "/assets/images/production_irth_2025.png",
     "link": "",
     "category": "Production"
   },
@@ -123,10 +103,50 @@
     "id": "rcb-qatar-2025",
     "title": "RCB x Qatar Airways",
     "role": "Music Composition and Production",
-    "composer": "Sanjay Das",
+    "composer": "Sanjay Das & Rounak Maiti",
     "year": "2025",
     "image": "/assets/images/production_rcb_2025.png",
     "link": "https://www.youtube.com/watch?v=NMLw3zU1UeQ",
+    "category": "Production"
+  },
+  {
+    "id": "sephora-2025",
+    "title": "Sephora",
+    "role": "Music Composition and Production",
+    "composer": "Sanjay Das",
+    "year": "2025",
+    "image": "/assets/images/production_sephora_2025.png",
+    "link": "https://www.instagram.com/p/DP1LoxygXVa/",
+    "category": "Production"
+  },
+  {
+    "id": "ikea-2025",
+    "title": "IKEA",
+    "role": "Music Composition and Production",
+    "composer": "Sanjay Das",
+    "year": "2025",
+    "image": "/assets/images/production_ikea_2025.png",
+    "link": "",
+    "category": "Production"
+  },
+  {
+    "id": "scapia-2025",
+    "title": "Scapia",
+    "role": "Music Composition and Production",
+    "composer": "Sanjay Das",
+    "year": "2025",
+    "image": "/assets/images/production_scapia_2025.png",
+    "link": "",
+    "category": "Production"
+  },
+  {
+    "id": "hyundai-2025",
+    "title": "Hyundai",
+    "role": "Music Composition and Production",
+    "composer": "Sanjay Das",
+    "year": "2025",
+    "image": "/assets/images/production_creta_2025.png",
+    "link": "",
     "category": "Production"
   },
   {
@@ -258,6 +278,37 @@
     "image": "/assets/images/soundpacks/sp_glitchcap.png",
     "link": "https://ampifymusic.com/the-hub/ampify-sounds-philtersoup/",
     "category": "Production"
+  },
+  {
+    "id": "ikyhwm-2025",
+    "title": "IKYHWM",
+    "role": "An interactive lyric visualiser built with WebGL for the debut single from 'LIGHTS ON'. Features real-time beat detection driving dynamic visual effects—from liquid displacement and chromatic aberration to barrel distortion and film grain. The system uses 3D Simplex noise for organic animations, syncs lyric typography to audio cues, and layers multiple rendering canvases for rich compositing. Users experience reactive visuals that pulse, warp, and transform with every beat.",
+    "composer": "",
+    "year": "2025",
+    "image": "/assets/images/crp_ikyhwm1_2025.png",
+    "link": "https://github.com/philtersoup/ikyhwm",
+    "category": "Creative Technology",
+    "images": [
+      "/assets/images/crp_ikyhwm1_2025.png",
+      "/assets/images/crp_ikyhwm2_2025.png",
+      "/assets/images/crp_ikyhwm3_2025.png",
+      "/assets/images/crp_ikyhwm4_2025.png"
+    ]
+  },
+  {
+    "id": "distributed-dissonance-2025",
+    "title": "Distributed Dissonance",
+    "role": "An immersive audiovisual installation by philterSoup and MYLES that transforms audience smartphones into a collaborative drone orchestra. Participants scan a QR code to instantly join a shared Wi-Fi network, enabling intuitive, interactive control of their phone-generated sounds. Their collective interactions merge seamlessly into a live, evolving composition, driving synchronized surround-sound and dynamic visuals. In a captivating 5–10 minute experience, Distributed Dissonance explores digital interconnectedness and collective creativity, turning personal devices into powerful instruments of artistic collaboration and expression.",
+    "composer": "",
+    "year": "2025",
+    "image": "/assets/images/crp_dd1_2025.png",
+    "link": "",
+    "category": "Creative Technology",
+    "images": [
+      "/assets/images/crp_dd1_2025.png",
+      "/assets/images/crp_dd2_2025.png",
+      "/assets/images/crp_dd3_2025.png"
+    ]
   },
   {
     "id": "embedded-development-2024",

@@ -20,7 +20,7 @@ const FillShaderMaterial = new THREE.ShaderMaterial({
         uTime: { value: 0 },
         uTriggerTime: { value: 0 },
         uMode: { value: 0 },
-        color: { value: new THREE.Color("#aaaaaa") } // Darker white/grey
+        color: { value: new THREE.Color("#aaaaaa") }
     },
     vertexShader: `
       varying vec2 vGlobalPos;
@@ -44,48 +44,49 @@ const FillShaderMaterial = new THREE.ShaderMaterial({
             float timeSince = uTime - uTriggerTime;
             float speedBase = 55.0; 
             
-            // --- MODE 0: RADIAL EXPAND (Center -> Out) ---
-            if (uMode == 0) {
+            if (uMode == 0) { // Radial Expand
                 float waveHead = timeSince * speedBase;
                 float waveWidth = 35.0;
                 float dist = length(vGlobalPos);
-                
                 if (dist < waveHead && dist > (waveHead - waveWidth)) {
                    alpha = 1.0;
-                   // Fade out tail
                    float tailPos = waveHead - waveWidth;
                    alpha *= smoothstep(tailPos, tailPos + 8.0, dist); 
-                   // Sharp head
                    alpha *= smoothstep(waveHead, waveHead - 1.0, dist);
                 }
             }
-            
-            // --- MODE 1: RADIAL CONTRACT (Out -> Center) ---
-            else if (uMode == 1) {
+            else if (uMode == 1) { // Radial Contract
                 float maxDist = 55.0; 
                 float waveHead = maxDist - (timeSince * speedBase);
                 float waveWidth = 35.0;
                 float dist = length(vGlobalPos);
-                
-                // Inverse logic: Wave comes IN
                 if (dist < (waveHead + waveWidth) && dist > waveHead) {
                     alpha = 1.0;
                     alpha *= smoothstep(waveHead, waveHead + 2.0, dist);
                     alpha *= smoothstep(waveHead + waveWidth, waveHead + waveWidth - 8.0, dist);
                 }
             }
-            
-            // --- MODE 2: HORIZONTAL SLICE (Left -> Right) ---
-            else if (uMode == 2) {
+            else if (uMode == 2) { // Horizontal Slice
                 float speed = speedBase * 1.2;
                 float startX = -50.0;
                 float waveHead = startX + (timeSince * speed);
                 float waveWidth = 30.0;
-                
                 if (vGlobalPos.x < waveHead && vGlobalPos.x > (waveHead - waveWidth)) {
                     alpha = 1.0;
                     alpha *= smoothstep(waveHead - waveWidth, waveHead - waveWidth + 8.0, vGlobalPos.x);
                     alpha *= smoothstep(waveHead, waveHead - 1.0, vGlobalPos.x);
+                }
+            }
+            else if (uMode == 3) { // Vertical Wipe (Top -> Bottom)
+                float speed = speedBase * 0.8;
+                float startY = 30.0;
+                float waveHead = startY - (timeSince * speed);
+                float waveWidth = 20.0;
+
+                if (vGlobalPos.y > waveHead && vGlobalPos.y < (waveHead + waveWidth)) {
+                    alpha = 1.0;
+                    alpha *= smoothstep(waveHead, waveHead + 2.0, vGlobalPos.y); 
+                    alpha *= smoothstep(waveHead + waveWidth, waveHead + waveWidth - 5.0, vGlobalPos.y);
                 }
             }
         }
@@ -98,14 +99,11 @@ const FillShaderMaterial = new THREE.ShaderMaterial({
     side: THREE.FrontSide
 });
 
-
-function MovingRow({ text, y, velocity }: { text: string, y: number, velocity: number }) {
-    // Repeat text more times for denser rows
+function MovingRow({ text, y, velocity, scrollVelocityRef }: { text: string, y: number, velocity: number, scrollVelocityRef?: any }) {
     const repeatedText = `${text} ${text} ${text} ${text} ${text}`;
 
     return (
-        <AnimatedGroup y={y} velocity={velocity}>
-            {/* Layer 1: Outline (Static Opacity) - Reduced Opacity per request */}
+        <AnimatedGroup y={y} velocity={velocity} scrollVelocityRef={scrollVelocityRef}>
             <Text
                 font={FONT_URL}
                 fontSize={FONT_SIZE}
@@ -122,9 +120,6 @@ function MovingRow({ text, y, velocity }: { text: string, y: number, velocity: n
             >
                 {repeatedText}
             </Text>
-
-
-            {/* Layer 2: Dynamic Fill (Shader) */}
             <Text
                 font={FONT_URL}
                 fontSize={FONT_SIZE}
@@ -142,7 +137,7 @@ function MovingRow({ text, y, velocity }: { text: string, y: number, velocity: n
     );
 }
 
-function AnimatedGroup({ children, y, velocity }: any) {
+function AnimatedGroup({ children, y, velocity, scrollVelocityRef }: any) {
     const ref = useMemo(() => new THREE.Group(), []);
 
     useEffect(() => {
@@ -150,7 +145,20 @@ function AnimatedGroup({ children, y, velocity }: any) {
     }, [y, ref]);
 
     useFrame((state, delta) => {
-        ref.position.x += velocity * delta;
+        let currentVelocity = velocity;
+
+        // Apply "warp" speed based on scroll velocity
+        if (scrollVelocityRef && scrollVelocityRef.current !== 0) {
+            // Add extra kick relative to scroll speed
+            // Math.sign(velocity) ensures we speed up in the direction of travel
+            // (Or we can make it chaotic by just adding raw scrollForce)
+            // Let's make it so scrolling fast adds ENERGY to everything
+            const boost = Math.abs(scrollVelocityRef.current) * 1.5 * Math.sign(velocity);
+            currentVelocity += boost;
+        }
+
+        ref.position.x += currentVelocity * delta;
+
         const resetWidth = 50;
         if (ref.position.x < -resetWidth / 2) ref.position.x += resetWidth;
         if (ref.position.x > resetWidth / 2) ref.position.x -= resetWidth;
@@ -159,26 +167,53 @@ function AnimatedGroup({ children, y, velocity }: any) {
     return <primitive object={ref}>{children}</primitive>;
 }
 
+const LERP_FACTOR = 0.1;
+
 function Composition({ text }: { text: string }) {
     const { clock } = useThree();
+    const groupRef = useRef<THREE.Group>(null);
 
-    // Internal state
+    // Scroll tracking
+    const lastScrollY = useRef(0);
+    const scrollVelocity = useRef(0);
+
     const [displayedText, setDisplayedText] = useState(text);
 
-    // Trigger Transition logic
     useEffect(() => {
         if (text !== displayedText) {
             setDisplayedText(text);
-
-            // Trigger Wipe
-            const nextMode = Math.floor(Math.random() * 3);
+            const nextMode = Math.floor(Math.random() * 4);
             FillShaderMaterial.uniforms.uMode.value = nextMode;
             FillShaderMaterial.uniforms.uTriggerTime.value = clock.getElapsedTime();
         }
     }, [text, displayedText, clock]);
 
-    useFrame(() => {
+    useFrame((state) => {
         FillShaderMaterial.uniforms.uTime.value = clock.getElapsedTime();
+
+        // Calculate Scroll Velocity
+        if (typeof window !== 'undefined') {
+            const currentY = window.scrollY;
+            const deltaY = currentY - lastScrollY.current;
+            const velocity = deltaY * 0.1; // Scale down
+
+            // Smooth interpolation
+            scrollVelocity.current = THREE.MathUtils.lerp(scrollVelocity.current, velocity, 0.1);
+            lastScrollY.current = currentY;
+        }
+
+        const vel = scrollVelocity.current;
+
+        // Apply Banking / Tilt effects
+        if (groupRef.current) {
+            // Tilt based on velocity
+            const targetRotX = THREE.MathUtils.degToRad(vel * 2.5);
+            // Banking based on velocity
+            const targetRotZ = THREE.MathUtils.degToRad(vel * -1.5) - (5 * (Math.PI / 180));
+
+            groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, targetRotX, LERP_FACTOR);
+            groupRef.current.rotation.z = THREE.MathUtils.lerp(groupRef.current.rotation.z, targetRotZ, LERP_FACTOR);
+        }
     });
 
     const rows = useMemo(() => {
@@ -191,13 +226,14 @@ function Composition({ text }: { text: string }) {
     }, []);
 
     return (
-        <group rotation={[0, 0, -5 * (Math.PI / 180)]} scale={[1.1, 1.1, 1.1]}>
+        <group ref={groupRef} scale={[1.1, 1.1, 1.1]}>
             {rows.map((r) => (
                 <MovingRow
                     key={r.id}
                     text={displayedText}
                     y={r.y}
                     velocity={r.velocity}
+                    scrollVelocityRef={scrollVelocity}
                 />
             ))}
         </group>

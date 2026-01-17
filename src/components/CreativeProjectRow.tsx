@@ -22,7 +22,7 @@ export default function CreativeProjectRow({ project, index }: CreativeProjectRo
         <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.8, delay: index * 0.1 }}
             className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-32 items-start"
         >
@@ -30,12 +30,11 @@ export default function CreativeProjectRow({ project, index }: CreativeProjectRo
             <div className="space-y-8 order-2 lg:order-1">
                 <div>
                     <h2 className="text-4xl md:text-6xl font-blackout text-white mb-2">{project.title}</h2>
-                    <p className="text-red-500 font-mono text-sm uppercase tracking-widest">{project.year} • {project.role.split(',')[0]}</p>
+                    <p className="text-red-500 font-mono text-sm uppercase tracking-widest">{project.year}</p>
                 </div>
 
                 <div className="prose prose-invert prose-lg text-gray-400 font-light leading-relaxed">
                     <p>{project.role}</p>
-                    {/* If there was a 'description' field we would use it here, for now using role as context since it seems verbose in the JSON */}
                 </div>
 
                 {project.link && (

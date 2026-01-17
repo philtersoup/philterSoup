@@ -17,7 +17,7 @@ export default function PressCard({ item, index }: PressCardProps) {
         <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
             whileHover={{ y: -8, scale: 1.02, rotate: rotation }}
             className="group relative h-full w-full"

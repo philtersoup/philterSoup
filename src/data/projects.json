@@ -417,6 +417,36 @@
     ]
   },
   {
+    "id": "buck-wild-2025",
+    "title": "Buck Wild",
+    "role": "Mix Engineer",
+    "composer": "Karshni",
+    "year": "2025",
+    "image": "/assets/images/eng_karshni_2025.png",
+    "link": "https://karshni.bandcamp.com/album/buck-wild",
+    "category": "Mixing"
+  },
+  {
+    "id": "doom-in-bloom-2025",
+    "title": "Doom In Bloom",
+    "role": "Mix Engineer",
+    "composer": "Fox In The Garden",
+    "year": "2025",
+    "image": "/assets/images/eng_fox_2025.png",
+    "link": "https://foxinthegarden.bandcamp.com/album/doom-in-bloom",
+    "category": "Mixing"
+  },
+  {
+    "id": "enlightened-2023",
+    "title": "Enlightened!",
+    "role": "Mix Engineer",
+    "composer": "Rounak Maiti",
+    "year": "2023",
+    "image": "/assets/images/eng_rounak_2023.png",
+    "link": "https://rounakmaiti.bandcamp.com/album/enlightened",
+    "category": "Mixing"
+  },
+  {
     "id": "all-we-imagine-as-light",
     "title": "All We Imagine As Light",
     "role": "Mix Engineer",

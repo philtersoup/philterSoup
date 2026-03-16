@@ -1,5 +1,15 @@
 [
   {
+    "id": "bella-vita-2026",
+    "title": "Bella Vita",
+    "role": "Music Composition and Production",
+    "composer": "Sanjay Das",
+    "year": "2026",
+    "image": "/assets/images/production_bellavita_2026.png",
+    "link": "https://www.youtube.com/watch?v=8MrpS7RQHhk",
+    "category": "Production"
+  },
+  {
     "id": "lights-on-2025",
     "title": "LIGHTS ON",
     "role": "Album - Composition, Production & Mix",

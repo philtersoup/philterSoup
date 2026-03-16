@@ -18,7 +18,7 @@ export default function AudioEngineeringPage() {
                 <h1 className="font-syne text-4xl md:text-8xl font-bold text-white mb-4">Audio Engineering</h1>
                 <p className="text-gray-400 text-xl font-light max-w-2xl">Recording & Mixing</p>
             </header>
-            <CollageGrid projects={projects} />
+            <CollageGrid projects={projects} aspect="square" />
         </main>
     );
 }

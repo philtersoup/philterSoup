@@ -341,11 +341,11 @@
     "category": "Creative Technology"
   },
   {
-    "id": "aesthesis-2024",
+    "id": "aesthesis",
     "title": "Aesthesis",
     "role": "Networked audio-visual site-specific installation exploring relationships between space, time and audience interaction. London 2017.",
     "composer": "",
-    "year": "2024",
+    "year": "2017",
     "image": "/assets/images/crp_aes_2017.jpg",
     "link": "",
     "category": "Creative Technology",
@@ -356,11 +356,11 @@
     ]
   },
   {
-    "id": "red-bull-music-academy-diggin-in-the-carts-2024",
+    "id": "red-bull-music-academy-diggin-in-the-carts",
     "title": "Red Bull Music Academy: Diggin' in the Carts",
     "role": "Audio Reactive CRT Installation at Fabric, London 2017.",
     "composer": "",
-    "year": "2024",
+    "year": "2017",
     "image": "/assets/images/crp_rbma_2017.jpg",
     "link": "",
     "category": "Creative Technology",
@@ -371,11 +371,11 @@
     ]
   },
   {
-    "id": "shakespeare-i-in-5-1-i-2024",
+    "id": "shakespeare-in-5-1",
     "title": "Shakespeare in 5.1",
     "role": "An interactive performance piece featuring networked audio, voice actors, acoustic instruments & synthesizers; manipulated by a live audience through mobile web-browsers. London 2017.",
     "composer": "",
-    "year": "2024",
+    "year": "2017",
     "image": "/assets/images/crp_s51_2017.jpg",
     "link": "",
     "category": "Creative Technology",
@@ -387,11 +387,11 @@
     ]
   },
   {
-    "id": "systems-2024",
+    "id": "systems",
     "title": "Systems",
     "role": "A study in generative composition. Autonomous systems based on pioneering works of Craig Reynolds are modelled using contemporary web technologies and the data is sonified, using real-time synthesis algorithms designed in the Kyma Sound Design Environment.",
     "composer": "",
-    "year": "2024",
+    "year": "2017",
     "image": "/assets/images/crp_flock_2017.png",
     "link": "",
     "category": "Creative Technology",
@@ -402,11 +402,11 @@
     ]
   },
   {
-    "id": "voltage-controlled-video-matrix-2024",
+    "id": "voltage-controlled-video-matrix",
     "title": "Voltage Controlled Video Matrix",
     "role": "A study in physical computing. Banks of high-speed relays glitches 8 x 8 composite video. Can also be used as an 8 Voice Polyphonic Synthesizer at audio, and video rates.",
     "composer": "",
-    "year": "2024",
+    "year": "2017",
     "image": "/assets/images/crp_vcvm.png",
     "link": "https://twitter.com/philterSoup",
     "category": "Creative Technology",
@@ -417,21 +417,21 @@
     ]
   },
   {
-    "id": "buck-wild-2025",
+    "id": "buck-wild-2026",
     "title": "Buck Wild",
     "role": "Mix Engineer",
     "composer": "Karshni",
-    "year": "2025",
+    "year": "2026",
     "image": "/assets/images/eng_karshni_2025.png",
     "link": "https://karshni.bandcamp.com/album/buck-wild",
     "category": "Mixing"
   },
   {
-    "id": "doom-in-bloom-2025",
+    "id": "doom-in-bloom-2026",
     "title": "Doom In Bloom",
     "role": "Mix Engineer",
     "composer": "Fox In The Garden",
-    "year": "2025",
+    "year": "2026",
     "image": "/assets/images/eng_fox_2025.png",
     "link": "https://foxinthegarden.bandcamp.com/album/doom-in-bloom",
     "category": "Mixing"
@@ -481,7 +481,7 @@
     "title": "Doktor Gandu: Republic of Gandu",
     "role": "Producer, Mix Engineer",
     "composer": "",
-    "year": "2024",
+    "year": "2014",
     "image": "/assets/images/eng_ROG_2019.jpg",
     "link": "https://open.spotify.com/album/7pYkibphzASnSnu0W8V7Ea?autoplay=true",
     "category": "Mixing"
@@ -491,7 +491,7 @@
     "title": "Park Street Local EP",
     "role": "Producer, Mix Engineer",
     "composer": "",
-    "year": "2024",
+    "year": "2014",
     "image": "/assets/images/eng_psEP_2017.jpg",
     "link": "https://open.spotify.com/album/6wD4ryXeaDzzoNg3EV3nU0?autoplay=true",
     "category": "Mixing"
@@ -501,7 +501,7 @@
     "title": "Ganesh Talkies: GIFS",
     "role": "Recording Engineer",
     "composer": "",
-    "year": "2024",
+    "year": "2015",
     "image": "/assets/images/eng_gt_2017.jpg",
     "link": "https://soundcloud.com/ganeshtalkies/sets/the-great-indian-freak-show-1",
     "category": "Mixing"
@@ -511,7 +511,7 @@
     "title": "Run It's the Kid",
     "role": "Recording Engineer",
     "composer": "",
-    "year": "2024",
+    "year": "2016",
     "image": "/assets/images/eng_ritk_2016.jpg",
     "link": "https://open.spotify.com/album/1ebuyU0s1z7ePoD89Xwhwz",
     "category": "Mixing"
@@ -521,7 +521,7 @@
     "title": "The Supersonics: Heads Up",
     "role": "Recording Engineer",
     "composer": "",
-    "year": "2024",
+    "year": "2014",
     "image": "/assets/images/eng_ss_2015.jpg",
     "link": "https://open.spotify.com/album/10JvdLwcuQ4C649WMt8k63",
     "category": "Mixing"
@@ -531,7 +531,7 @@
     "title": "Ganesh Talkies: In Technicolor",
     "role": "Recording Engineer",
     "composer": "",
-    "year": "2024",
+    "year": "2014",
     "image": "/assets/images/eng_gt_2014.jpg",
     "link": "https://open.spotify.com/album/6le4rEZxROpwKmy4nxhK0x",
     "category": "Mixing"

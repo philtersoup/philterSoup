@@ -15,12 +15,14 @@ declare global {
   }
 }
 
+const SCROLL_MILESTONES = [25, 50, 75, 100] as const;
+
 // Integrates GoatCounter analytics:
-//  1. Counts a pageview on client-side (SPA) route changes. The first page load
-//     is counted by count.js automatically, so we skip the initial render.
-//  2. Logs every click on an outbound link as an event, so the dashboard's
-//     "Events" panel shows which projects, press articles, and listen links
-//     people actually click through to.
+//  1. SPA pageviews on client-side route changes (count.js handles the first load).
+//  2. Outbound-link clicks -> events ("out: host/path").
+//  3. Any element with [data-gc-event] -> a custom event on click. Set the
+//     attribute value to the event name, e.g. data-gc-event="gallery: My Project".
+//  4. Scroll depth -> events at 25/50/75/100% reach, once each per page.
 export default function GoatCounter() {
   const pathname = usePathname();
   const isFirstLoad = useRef(true);
@@ -34,23 +36,29 @@ export default function GoatCounter() {
     window.goatcounter?.count?.({ path: pathname });
   }, [pathname]);
 
-  // Outbound-link click tracking (one delegated listener for the whole app).
+  // Click tracking: outbound links + tagged [data-gc-event] elements.
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement | null;
-      const anchor = target?.closest?.("a");
-      if (!anchor) return;
+      const el = e.target as HTMLElement | null;
 
+      const tagged = el?.closest?.<HTMLElement>("[data-gc-event]");
+      if (tagged) {
+        const name = tagged.dataset.gcEvent?.trim();
+        if (name) {
+          window.goatcounter?.count?.({ path: name, title: name, event: true });
+        }
+        return;
+      }
+
+      const anchor = el?.closest?.("a");
+      if (!anchor) return;
       let url: URL;
       try {
         url = new URL(anchor.href);
       } catch {
-        return; // not an absolute/parseable URL (e.g. mailto:, #anchors)
+        return; // mailto:, #anchors, etc.
       }
-
-      // Only track links that leave the site.
-      if (url.host === window.location.host) return;
-
+      if (url.host === window.location.host) return; // internal -> already a pageview
       window.goatcounter?.count?.({
         path: `out: ${url.host}${url.pathname}`,
         title: anchor.textContent?.trim() || url.href,
@@ -61,6 +69,32 @@ export default function GoatCounter() {
     document.addEventListener("click", handleClick);
     return () => document.removeEventListener("click", handleClick);
   }, []);
+
+  // Scroll-depth tracking, reset on each page.
+  useEffect(() => {
+    const reached = new Set<number>();
+
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const scrollable = doc.scrollHeight - window.innerHeight;
+      if (scrollable <= 0) return;
+      const percent = ((window.scrollY / scrollable) * 100);
+
+      for (const milestone of SCROLL_MILESTONES) {
+        if (percent >= milestone && !reached.has(milestone)) {
+          reached.add(milestone);
+          window.goatcounter?.count?.({
+            path: `scroll ${milestone}%: ${pathname}`,
+            title: `Scrolled ${milestone}% — ${pathname}`,
+            event: true,
+          });
+        }
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [pathname]);
 
   return null;
 }

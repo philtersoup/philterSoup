@@ -55,6 +55,7 @@ export default function CreativeProjectRow({ project, index }: CreativeProjectRo
                             <button
                                 key={i}
                                 onClick={() => setSelectedImage(img)}
+                                data-gc-event={`gallery: ${project.title}`}
                                 className={`relative flex-shrink-0 w-24 h-16 md:w-32 md:h-20 border-2 transition-all duration-300 ${selectedImage === img ? 'border-red-500 opacity-100' : 'border-transparent opacity-50 hover:opacity-100'}`}
                             >
                                 <Image

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Syne, Inter } from "next/font/google";
+import Script from "next/script";
 import Navigation from "@/components/Navigation";
+import GoatCounter from "@/components/GoatCounter";
 import "./globals.css";
 
 const syne = Syne({
@@ -31,6 +33,12 @@ export default function RootLayout({
       >
         <Navigation />
         {children}
+        <GoatCounter />
+        <Script
+          data-goatcounter="https://philtersoup.goatcounter.com/count"
+          src="//gc.zgo.at/count.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
